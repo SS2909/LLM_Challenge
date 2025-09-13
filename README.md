@@ -1,4 +1,4 @@
-# LLM Chat App (Streamlit + FastAPI + RAG)
+# LLM Chat App
 
 This is a sample project scaffold demonstrating:
 - FastAPI backend with simple JWT-like auth (token created via jose)
