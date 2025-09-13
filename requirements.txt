@@ -1,0 +1,13 @@
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+python-multipart==0.0.6
+SQLAlchemy==2.0.22
+passlib[bcrypt]==1.7.5
+python-jose==3.3.0
+pydantic==1.10.11
+requests==2.31.0
+streamlit==1.23.0
+chromadb==0.3.28
+openai==0.28.0
+langchain==0.0.375
+python-dotenv==1.0.0

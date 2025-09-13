@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  web:
+    build: ./backend
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///./app.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+  streamlit:
+    image: python:3.11-slim
+    volumes:
+      - ./streamlit_app:/streamlit_app
+      - ./requirements.txt:/requirements.txt
+    ports:
+      - '8501:8501'
+    command: bash -c "pip install -r /requirements.txt && pip install -r /streamlit_app/../requirements.txt || true; streamlit run /streamlit_app/app.py --server.port 8501 --server.headless true"
